@@ -16,11 +16,20 @@ This exercise introduces a specific formula for calculating accuracy in imbalanc
 
 ### Custom Accuracy Formula
 
-Given an imbalanced dataset with two classes (0 and 1), the accuracy is calculated as follows:
+In the context of an imbalanced dataset with two classes (0 and 1), the accuracy is calculated using the following method:
 
-\[ \text{Accuracy} = \frac{1}{2} \left( \frac{\text{Correct predictions for class 0}}{\text{Total samples of class 0}} + \frac{\text{Correct predictions for class 1}}{\text{Total samples of class 1}} \right) \]
+The formula is:
 
-This formula ensures that the accuracy metric takes into account the performance on both classes, which is particularly important in imbalanced datasets where a simple accuracy metric might be misleading.
+Accuracy = 0.5 * [ (Correct predictions for class 0 / Total samples of class 0) + (Correct predictions for class 1 / Total samples of class 1) ]
+
+**Where:**
+
+- **Correct predictions for class 0**: The number of samples from class 0 that were correctly predicted by the model.
+- **Total samples of class 0**: The total number of samples that belong to class 0 in the dataset.
+- **Correct predictions for class 1**: The number of samples from class 1 that were correctly predicted by the model.
+- **Total samples of class 1**: The total number of samples that belong to class 1 in the dataset.
+
+This formula calculates the accuracy by averaging the proportion of correctly predicted samples for each class. This approach provides a balanced measure of performance for both classes, which is essential for datasets where one class is much more prevalent than the other. Using this method helps to avoid misleading results that might arise from using standard accuracy metrics in imbalanced scenarios.
 
 ### Experimental Results and Analysis
 
